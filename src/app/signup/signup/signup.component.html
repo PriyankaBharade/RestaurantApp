@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="md-col-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Restaurant Signup</h1>
+                    <h5>Get Free Membership</h5>
+                </div>
+                <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                      <label  class="form-label">Name</label>
+                      <input formControlName="name" type="name" placeholder="Enter Name"
+                       class="form-control"
+                       id="exampleInputName" aria-describedby="emailHelp">
+                       <span *ngIf="name && name.invalid && name.touched" style="color: red;">
+                        Field is required
+                       </span>
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Mobile Number</label>
+                        <input formControlName="mobile" type="number" placeholder="Enter Mobile" class="form-control" 
+                        id="exampleInputMobile" aria-describedby="emailHelp">
+                        <span *ngIf="mobile && mobile.invalid && mobile.touched" style="color: red;">
+                          Enter Valid Mobile Number
+                         </span>
+                      </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Email address</label>
+                        <input formControlName="email" type="email" placeholder="Enter Email" class="form-control"
+                         id="exampleInputEmail" aria-describedby="emailHelp">
+                         <span *ngIf="email && email.invalid && email.touched" style="color: red;">
+                          Enter Valid Email Address
+                         </span>
+                      </div>
+                    <div class="mb-3">
+                      <label  class="form-label">Password</label>
+                      <input formControlName="password" placeholder="Enter Password" type="password" 
+                      class="form-control" id="exampleInputPassword">
+                      <span *ngIf="password && password.invalid && password.touched" style="color: red;">
+                        Enter Valid Password
+                       </span>
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button [disabled]="signUpForm.invalid" type="submit" class="btn btn-primary">Signup</button>
+                  </form>
+                  <a routerLink="/login">Already Member? Click to Login !</a>
+            </div>
+        </div>
+    </div>
+</div>

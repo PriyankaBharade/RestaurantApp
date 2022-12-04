@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="md-col-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Restaurant Login</h1>
+                    <h5>Feel Free to Login</h5>
+                </div>
+                <!-- <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail" class="form-label">Email address</label>
+                      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword" class="form-label">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </form> -->
+                  <form #loginForm="ngForm" (ngSubmit) = login(loginForm)>
+                    <label for="exampleInputEmail" class="form-label">Email address</label>
+                    <input type="text" required #name="ngModel" email class="form-control" placeholder="Enter Email" name="email" ngModel/>
+                    <span *ngIf="name.invalid && name.touched" style="color: red">Please enter a valid email address</span>
+                    <br/>
+                    <label for="exampleInputPassword" class="form-label">Password</label>
+                    <input type="password" required #password="ngModel" minlength="6" class="form-control" placeholder="Enter Password" name="password" ngModel/>
+                    <span *ngIf="password.invalid && password.touched" style="color: red">Please enter a valid Password</span>
+                    <br/><br/>
+                    <button [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+                </form>
+                  <a style="color:blue; margin-top: 10px" routerLink="/signup">New User? Click to Signup !</a>
+            </div>
+        </div>
+    </div>
+</div>

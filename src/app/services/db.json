@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "name": "Test",
+      "email": "test@gmail.com",
+      "mobile": 111111111,
+      "address": "Bangali Square",
+      "service": "Wifi,Free Services, Tea"
+    },
+    {
+      "id": 4,
+      "name": "Mayank",
+      "email": "mayank1@gmail.com",
+      "mobile": 987654321,
+      "address": "Indore",
+      "service": "New taste food"
+    },
+    {
+      "id": 5,
+      "name": "Mayank",
+      "email": "mayank1@gmail.com",
+      "mobile": 987654321,
+      "address": "Indore",
+      "service": "Tasty Food"
+    }
+  ],
+  "signup": [
+    {
+      "name": "PRIYANKA BHARADE",
+      "email": "priyankabharade7apr@gmail.com",
+      "mobile": 9111800767,
+      "password": "1234567",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "priyankabharade7apr@gmail.com",
+      "mobile": "",
+      "password": "1234567",
+      "id": 2
+    },
+    {
+      "name": "Mayank",
+      "email": "mayank@gmail.com",
+      "mobile": 987654321,
+      "password": "",
+      "id": 3
+    },
+    {
+      "name": "Test",
+      "email": "priyankabharade7apr@gmail.com",
+      "mobile": null,
+      "password": "1234567",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
